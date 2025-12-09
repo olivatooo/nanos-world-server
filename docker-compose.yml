@@ -1,0 +1,16 @@
+services:
+  nanos-world-server:
+    image: olivatooo/nanos-world-server:latest
+    container_name: nanos-world-server
+    restart: unless-stopped
+    # Uncomment to always have the latest version
+    # pull_policy: always
+    ports:
+      - "7777:7777/udp"
+      - "7777:7777/tcp"
+    volumes:
+      - ./server-data:/app/data
+      - ./config:/app/config
+      - ./logs:/app/logs
+    # Uncomment and modify to pass parameters to the server
+    # command: ["--port", "7777", "--map", "MyMap"]
