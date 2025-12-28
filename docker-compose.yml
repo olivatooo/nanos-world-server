@@ -9,6 +9,9 @@ services:
       - "7777:7777/udp"
       - "7777:7777/tcp"
     volumes:
-      - .:/app
+      - ./Packages:/app/Packages
+      - ./Assets:/app/Assets
+      # You can create a Config.toml file to configure the server
+      # - ./Config.toml:/app/Config.toml
     # Uncomment and modify to pass parameters to the server
     # command: ["--port", "7777", "--map", "MyMap"]
