@@ -9,8 +9,6 @@ services:
       - "7777:7777/udp"
       - "7777:7777/tcp"
     volumes:
-      - ./server-data:/app/data
-      - ./config:/app/config
-      - ./logs:/app/logs
+      - .:/app
     # Uncomment and modify to pass parameters to the server
     # command: ["--port", "7777", "--map", "MyMap"]
